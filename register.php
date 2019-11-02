@@ -37,23 +37,24 @@
                   <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary float-right">Login</button>
               </form>
 
               </div>
               <div class = "card-footer ">
               <h4 class =" container text-center">Or Login With Google</h4>
               <a href="#" >
-              <img class = "rounded mx-auto d-block"src="Google.jpg" alt="Sign in with Google" style = "height : 40px; width : 50px;  "></a></div>
+              <img class = "rounded mx-auto d-block"src="Google.jpg" alt="Sign in with Google" style = "height : 45px; width : 50px;  "></a></div>
             </div>
       
         </div>
         <div class="col-sm-6" style="padding : 20px;">
           <div class ="card">
-            <div class= "card-body">
+          <img class = "card-img"src="img/Greece.jpeg" alt="">
+            <div class= "card-img-overlay">
             <h2 class = "container text-center"> Do not miss any of our amazing packages !</h2>
-            <h4 class = "text-center">Don't have an account? <button class = "btn btn-default"data-toggle="modal" data-target="#regi_modal"> Register now</button></h4>
-            <img src="img/Greece.jpeg" alt="">
+            <h4 class = "text-center">Don't have an account? <button class = "btn btn-outline-warning"data-toggle="modal" data-target="#regi_modal"> Register now</button></h4>
+            
 
               
             </div>
