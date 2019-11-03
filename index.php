@@ -8,7 +8,7 @@
                         <div class="banner_text_iner">
                             <h1> Saintmartine</h1>
                             <p>Let’s start your journey with us, your dream will come true</p>
-                            <a href="#" class="btn_1">Discover Now</a>
+                            <a href="packages.php" class="btn_1">Discover Now</a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <div class="hover_Text d-flex align-items-end justify-content-between">
                             <div class="hover_text_iner">
                                 <a href="#" class="place_btn">travel</a>
-                                <h3>Saintmartine Iceland</h3>
+                                <h3>Cox's Bazar Bangladesh</h3>
                                 <p>Technaf, Bangladesh</p>
                                 <div class="place_review">
                                     <a href="#"><i class="fas fa-star"></i></a>
