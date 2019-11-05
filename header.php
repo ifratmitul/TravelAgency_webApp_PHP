@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script src = "script.js"></script>
 </head>
 
 <body>
