@@ -8,7 +8,7 @@
 
 
         <div class="card" id = "admin_panel">
-                <div class="card-header ">Header
+                <div class="card-header ">
 
                 </div>
                 <div class="card-body">
@@ -230,41 +230,41 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                                <form>
+                                <form id = "addEmploye" method = "post" >
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Employee Name</label>
-                                          <input type="text" class="form-control" id="p_title" placeholder="First and Last Name">
+                                          <input type="text" class="form-control" id="eName" placeholder="First and Last Name">
                                         </div>
                                         <div class="form-group">
                                                 <label for="exampleFormControlInput1">Employee Designation</label>
-                                                <input type="text" class="form-control" id="D_gtitle" placeholder="Designation/title">
+                                                <input type="text" class="form-control" id="edesignation" placeholder="Designation/title">
                                         </div>
                                         <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                                <input type="email" class="form-control" id="e_email" aria-describedby="emailHelp" placeholder="Enter email">
                                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                        </div>
                                         <div class="form-group">
                                                 <label for="exampleInputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                <input type="password" class="form-control" id="ep1" placeholder="Password">
                                          </div>
                                          <div class="form-group">
                                                 <label for="exampleInputPassword1"> Confirm Password</label>
-                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                <input type="password" class="form-control" id="ep2" placeholder="Password">
                                          </div>
                                         
 
 
                                         <div class="form-group">
-                                                <label for="exampleFormControlFile1">Add Profile Picture</label>
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                                <label for="exampleFormControlFile1">Add Profile Picture</label >
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
                                               </div>
 
                                       </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" class="btn btn-primary">Add Employe Details to Database</button>
+                          <button type="submit" onclick= "employe_validation()" class="btn btn-primary">Add Employe Details to Database</button>
                         </div>
                       </div>
                     </div>
