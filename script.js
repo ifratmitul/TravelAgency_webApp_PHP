@@ -75,3 +75,4 @@ function employe_validation()
         alert("Password Doesn't match.");
     }
 }
+
