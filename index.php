@@ -33,46 +33,36 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="single_place">
-                        <img src="img/single_place_1.png" alt="">
+                        <img src="img/gallery/photo1.jpeg" alt="">
                         <div class="hover_Text d-flex align-items-end justify-content-between">
                             <div class="hover_text_iner">
-                                <a href="#" class="place_btn">travel</a>
-                                <h3>Cox's Bazar Bangladesh</h3>
-                                <p>Technaf, Bangladesh</p>
+
+                                <h3>Cox's Bazar, Bangladesh</h3>
+
                                 <div class="place_review">
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <span>(210 review)</span>
+
                                 </div>
                             </div>
                             <div class="details_icon text-right">
-                                <i class="ti-share"></i>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <div class="single_place">
-                        <img src="img/single_place_2.png" alt="">
+                        <img src="img/gallery/photo5.jpeg" alt="">
                         <div class="hover_Text d-flex align-items-end justify-content-between">
                             <div class="hover_text_iner">
-                                <a href="#" class="place_btn">travel</a>
-                                <h3>Saintmartine Iceland</h3>
-                                <p>Technaf, Bangladesh</p>
+
+                                <h3>Greece</h3>
+                                <p></p>
                                 <div class="place_review">
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <span>(210 review)</span>
+
                                 </div>
                             </div>
                             <div class="details_icon text-right">
-                                <i class="ti-share"></i>
+                               
                             </div>
                         </div>
                     </div>
@@ -82,20 +72,14 @@
                         <img src="img/single_place_3.png" alt="">
                         <div class="hover_Text d-flex align-items-end justify-content-between">
                             <div class="hover_text_iner">
-                                <a href="#" class="place_btn">travel</a>
-                                <h3>Saintmartine Iceland</h3>
-                                <p>Technaf, Bangladesh</p>
+
+                                <h3>Phi Phi Island, Thiland</h3>
+
                                 <div class="place_review">
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <span>(210 review)</span>
+
                                 </div>
                             </div>
                             <div class="details_icon text-right">
-                                <i class="ti-share"></i>
                             </div>
                         </div>
                     </div>
@@ -105,25 +89,16 @@
                         <img src="img/single_place_4.png" alt="">
                         <div class="hover_Text d-flex align-items-end justify-content-between">
                             <div class="hover_text_iner">
-                                <a href="#" class="place_btn">travel</a>
-                                <h3>Saintmartine Iceland</h3>
-                                <p>Technaf, Bangladesh</p>
-                                <div class="place_review">
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <a href="#"><i class="fas fa-star"></i></a>
-                                    <span>(210 review)</span>
-                                </div>
+
+                                <h3>Some where in Carabian</h3>
+
+                               
                             </div>
-                            <div class="details_icon text-right">
-                                <i class="ti-share"></i>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn_1 text-cnter">Discover more</a>
+                <a href="packages.php" class="btn_1 text-cnter">Discover more</a>
             </div>
         </div>
     </section>
@@ -144,16 +119,12 @@
                                         <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.
                                         </p>
                                         <p>date: <span>12 Aug 2019</span> </p>
-                                        <p>Cost: <span>Start from $820</span> </p>
-                                        <p>Organizer: <span> Martine Agency</span> </p>
+                                        <p>Cost: $820 </p>
+
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
@@ -170,16 +141,12 @@
                                         <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.
                                         </p>
                                         <p>date: <span>12 Aug 2019</span> </p>
-                                        <p>Cost: <span>Start from $820</span> </p>
-                                        <p>Organizer: <span> Martine Agency</span> </p>
+                                        <p>Cost: <span>$820</span> </p>
+
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>
@@ -192,20 +159,16 @@
                                 <div class="ol-lg-6 col-md-6">
                                     <div class="event_slider_content">
                                         <h5>Upcoming Event</h5>
-                                        <h2>Maldeve - Asia</h2>
+                                        <h2>Bali, Indonesia</h2>
                                         <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.
                                         </p>
                                         <p>date: <span>12 Aug 2019</span> </p>
-                                        <p>Cost: <span>Start from $820</span> </p>
-                                        <p>Organizer: <span> Martine Agency</span> </p>
+                                        <p>Cost: <span>$820</span> </p>
+
                                         <div class="rating">
                                             <span>Rating:</span>
                                             <div class="place_review">
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
-                                                <a href="#"><i class="fas fa-star"></i></a>
+
                                             </div>
                                         </div>
                                         <a href="#" class="btn_1">Plan Details</a>

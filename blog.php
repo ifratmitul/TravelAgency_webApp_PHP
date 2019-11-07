@@ -23,7 +23,7 @@
         </div>
     </section>
     <!-- breadcrumb start-->
-    <nav class="navbar navbar-expand-sm bg-light " id  = "snav"><h4 style = "padding: 5px;">Find different Blog based on location</h4>  
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center " id  = "snav"><h4 style = "padding: 5px;">Find different Blog based on location</h4>  
     <ul class="navbar-nav">
     <li class="nav-item">
     <div class="form-group">
@@ -68,7 +68,7 @@
                                 
                             </div>
 
-                            <div class="blog_details">\
+                            <div class="blog_details">
                                     <h2>My Experince on bali Trip</h2>
                                     <h4>Location: Bali, Indonesia</h4>
                                 
