@@ -43,8 +43,8 @@
               </div>
               <div class = "card-footer ">
               <h4 class =" container text-center">Or Login With Google</h4>
-              <a href="#" >
-              <img class = "rounded mx-auto d-block"src="Google.jpg" alt="Sign in with Google" style = "height : 45px; width : 50px;  "></a></div>
+               <div class = "g-signin2" data-onsuccess = "onSignIn"></div>
+              </div>
             </div>
       
         </div>

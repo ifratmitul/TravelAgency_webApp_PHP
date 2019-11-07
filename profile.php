@@ -53,9 +53,10 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h3 class="card-title">Abul Mia</h3>
-        <h4>Email: abul@kuddus.com</h4>
+        <h3 class="card-title" id = "uname">Abul Mia</h3>
+        <h4>Email: <p id = "Email"> abul@kuddus.com</p></h4>
         <button class = "btn btn-warning">Edit Profile</button>
+        <button class = "btn btn-warning" onclick = "singout()">Log Out</button>
 
       </div>
     </div>
