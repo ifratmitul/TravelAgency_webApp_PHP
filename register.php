@@ -1,4 +1,5 @@
 <?php include ('header.php'); ?>
+
     <!-- breadcrumb start-->
     <section class="breadcrumb breadcrumb_bg" >
         <div class="container">
@@ -6,8 +7,8 @@
                 <div class="col-lg-12">
                     <div class="breadcrumb_iner">
                         <div class="breadcrumb_iner_item text-center">
-                            <h2>About Us</h2>
-                            <p>home . about us</p>
+                            <h2>Login or Sign Up</h2>
+
                         </div>
                     </div>
                 </div>
