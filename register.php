@@ -42,9 +42,9 @@
               </form>
 
               </div>
-              <div class = "card-footer ">
+              <div class = "card-footer justify-content-center ">
               <h4 class =" container text-center">Or Login With Google</h4>
-               <div class = "g-signin2" data-onsuccess = "onSignIn"></div>
+               <div class = "g-signin2 " data-onsuccess = "onSignIn"></div>
               </div>
             </div>
       

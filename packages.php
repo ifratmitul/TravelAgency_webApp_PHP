@@ -77,7 +77,7 @@
                             <h5>From <span>$500</span></h5>
                         </div>
 						
-						<button class="btn btn-info">See Details</button> <span></span> <button class="btn  btn-warning">Book Now</button>
+						<button class="btn btn-info" data-toggle="modal" data-target="#myModal">See Details</button> <span></span> <button class="btn  btn-warning">Book Now</button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
@@ -92,7 +92,7 @@
                             <p>Duration: 5 days</p>
                             <h5>From <span>$500</span></h5>
                         </div>
-						<button class="btn btn-info">See Details</button> <span></span> <button class="btn btn-warning">Book Now</button>
+						<button class="btn btn-info" data-toggle="modal" data-target="#myModal">See Details</button> <span></span> <button class="btn btn-warning">Book Now</button>
                     </div>
                 </div>
                 <div class="col-lg-4 col-sm-6">
@@ -107,7 +107,7 @@
                             <p>Duration: 5 days</p>
                             <h5>From <span>$500</span></h5>
                         </div>
-						<button class="btn btn-info">See Details</button> <span></span> <button class="btn btn-warning">Book Now</button>
+						<button class="btn btn-info" data-toggle="modal" data-target="#myModal">See Details</button> <span></span> <button class="btn btn-warning">Book Now</button>
                     </div>
                 </div>
             </div>
@@ -161,3 +161,49 @@
     </section>
     <!--::industries end::-->
     <?php include ('footer.php'); ?>
+
+
+
+
+
+        <!-- Modal area-->
+
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Package Details</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 class = "text-center"> A Trip to Bali</h1>
+                            <div class = "text-center">
+                            <img src="img/single_place_4.png" alt="" >
+                            </div>
+                            <br>
+
+                            <h3>Location: Bali, Indonessia</h3>
+                            <h3>Hotel: Inter-Continental</h3>
+                            <h3>2 Person per Package</h3>
+                            
+
+
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+                  
+                  <!--modal-->
+
+
+ 

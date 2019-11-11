@@ -82,3 +82,9 @@ function employe_validation()
     }
 }
 
+function blog_validation()
+{
+
+    
+
+}
