@@ -27,20 +27,20 @@
                 <h3 class = "text-center">Already have an accnount? Login</h3>
               </div>
               <div class = "card-body">
-              <form>
+              <form id ="login_f" method = "post" action = "action_page.php">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="u-email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                  <input type="email" name  = "email" class="form-control" id="u-email" aria-describedby="emailHelp" placeholder="Enter email" required>
                   <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="u-p" placeholder="Password" required>
+                  <input type="password" name ="pass1" class="form-control" id="u-p" placeholder="Password" required>
                 </div>
                 <h4 id = "error"></h4>
-                <button type="submit"  class="btn btn-primary float-right">Login</button>
-              </form>
 
+              </form>
+              <button type="submit" name= "login_user" form = "login_f"  class="btn btn-primary float-right">Login</button>
               </div>
               <div class = "card-footer justify-content-center ">
               <h4 class =" container text-center">Or Login With Google</h4>
@@ -78,40 +78,37 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                            <form id = "regi_form" method = "post" >
+                            <form id = "regi_form" method = "post" action = "action_page.php">
 
                               <div class="form-row">
                                  <div class="form-group col-md-6">
                                     <label for="inputEmail4">First Name</label>
-                                    <input type="text" class="form-control" id="Fname" placeholder="Your First Name" required>
+                                    <input type="text" class="form-control" name = "fname" id="Fname" placeholder="Your First Name" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="inputPassword4">Last Name</label>
-                                    <input type="text" class="form-control" id="Lname" placeholder="Your Last Name" required>
+                                    <input type="text" class="form-control" name = "lname" id="Lname" placeholder="Your Last Name" required>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
                                     <label for="inputEmail4">Password</label>
-                                    <input type="password" class="form-control" id="pass1" placeholder="Minimum 6 Character">
+                                    <input type="password" class="form-control" name = "p1" id="pass1" placeholder="Minimum 6 Character">
                                   </div>
                                   <div class="form-group col-md-6">
                                     <label for="inputPassword4">Confirm Password</label>
-                                    <input type="password" class="form-control" id="pass2" placeholder="Confirm Password">
+                                    <input type="password" class="form-control"  name = "p2" id="pass2" placeholder="Confirm Password">
                                   </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress">Email</label>
-                                    <input type="email" class="form-control" id="r_email" placeholder="Email Address">
+                                    <input type="email" class="form-control" name = "email" id="r_email" placeholder="Email Address">
                                 </div>
                                 <div class="form-group">
                                   <label for="inputAddress">Address</label>
-                                  <input type="text" class="form-control" id="add" placeholder="block, Street">
+                                  <input type="text" name = "address" class="form-control" id="add" placeholder="block, Street">
                                 </div>
-                                <div class="form-group">
-                                  <label for="inputAddress2">Address 2</label>
-                                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment no, floor">
-                                </div>
+                                
 
 
                             </form>
@@ -119,7 +116,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" form = "regi _form" onclick = "regi_validation()" class="btn btn-primary" >Submit</button>
+                          <button type="submit" name = "u_regi" form = "regi_form" onclick = "regi_validation()" value = "Submit"class="btn btn-primary" >Submit</button>
                         </div>
                       </div>
                     </div>

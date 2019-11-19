@@ -44,28 +44,60 @@
     </section>
     <!-- breadcrumb ends-->
         <!-- Profile card starts-->
+
+<?php 
+
+
+if(isset($_SESSION['email'])){
+    $_SESSION['msg'] = "You Must login to view this page";
+    header('location:register.php');
+}
+
+if(isset($_GET['logout'])){
+    session_destroy();
+    unset($_SESSION['fname']);
+    header('location: index.php');
+}
+
+?>
+
+<?php if(isset($_SESSION['success'])) : ?>
+        <h5> 
+            <?php 
+            
+            echo $_SESSION['success'];
+            unset($_SESSION['success']);
+            
+            ?>
+        </h5>
+        <?php endif ?>
+        <?php if(isset($_SESSION['email'])) : ?>
         <!--  Make sure profile cards contain padding of 80px around it.-->
         <section id = "pro">
         <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="" id  = "p_card">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-    <img class="rounded-circle account-img card-img" src="profile.png" id  ="pic">
-    </div>
+          <div class="row no-gutters">
+          <div class="col-md-4">
+          <img class="rounded-circle account-img card-img" src="profile.png" id  ="pic">
+        </div>
     <div class="col-md-8">
-      <div class="card-body">
-        <h3 class="card-title" id = "uname">Abul Mia</h3>
-        <h4>Email: <p id = "Email"> abul@kuddus.com</p></h4>
-        <button class = "btn btn-warning">Edit Profile</button>
-        <button class = "btn btn-warning" onclick = "singout()">Log Out</button>
 
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="card-body">
+
+
+
+        <h3 class="card-title" id = "uname"><?php echo $_SESSION['fname'];?> </h3>
+        <p id = "Email"> <?php echo $_SESSION['email'];?></p>
+        <button class = "btn btn-warning">Edit Profile</button>
+        <button class = "btn btn-warning"><a href = "index.php?logout = '1'" ></a>Log Out</button>
+
+            </div>
+            </div>
+        </div>
+        </div>
 
         </section>
 
-       
+   <?php endif ?>    
  
         
         <!-- Profile card ends-->

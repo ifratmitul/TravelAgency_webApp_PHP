@@ -19,9 +19,7 @@ function regi_validation()
         window.alert("Must fill First and Last Name and it can't contain number")
     }
     
-    if( p1 < 6 || p1 > 12){
-        window.alert("Password must be within 6 to 12 character");
-    }
+
     if (p1 != p2){
         window.alert("Password doesn't match.");
     }
