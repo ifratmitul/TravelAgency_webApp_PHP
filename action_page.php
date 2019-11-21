@@ -69,11 +69,11 @@ include ('connection.php');
         }
 
         if (count($errors ) == 0){
-            $password = md5($password);
+            $password = md5($pass);
             $query =  "SELECT * FROM userList WHERE email = '$email' AND password = '$password'";
             $result =  mysqli_query($conn, $query);
             if(mysqli_num_rows($result)){
-                $_SESSION['email'] = $emai;
+                $_SESSION['email'] = $email;
                 $_SESSION['success'] = "You are now logged IN";
                 header('location: profile.php');
             }
@@ -83,6 +83,12 @@ include ('connection.php');
         }
     }
 
+    //adminlogin
+
+    if(isset($_POST['admin_login']))
+    {
+
+    }
 
 
 

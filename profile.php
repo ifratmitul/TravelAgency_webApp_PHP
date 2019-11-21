@@ -71,7 +71,7 @@ if(isset($_GET['logout'])){
             ?>
         </h5>
         <?php endif ?>
-        <?php if(isset($_SESSION['email'])) : ?>
+
         <!--  Make sure profile cards contain padding of 80px around it.-->
         <section id = "pro">
         <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="" id  = "p_card">
@@ -84,12 +84,16 @@ if(isset($_GET['logout'])){
       <div class="card-body">
 
 
-
+      <?php if(isset($_SESSION['email'])) : ?>
+      <?php
+      $pull_data =  $_SESSION['email']; 
+      $sql =  "SELECT fname FROM userList WHERE email = '$pull_data'"; 
+      ?>
         <h3 class="card-title" id = "uname"><?php echo $_SESSION['fname'];?> </h3>
         <p id = "Email"> <?php echo $_SESSION['email'];?></p>
         <button class = "btn btn-warning">Edit Profile</button>
         <button class = "btn btn-warning"><a href = "index.php?logout = '1'" ></a>Log Out</button>
-
+        <?php endif ?>    
             </div>
             </div>
         </div>
@@ -97,7 +101,7 @@ if(isset($_GET['logout'])){
 
         </section>
 
-   <?php endif ?>    
+
  
         
         <!-- Profile card ends-->
