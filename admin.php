@@ -1,4 +1,8 @@
-<?php include ('admin_header.php'); ?>
+<?php include ('admin_header.php'); 
+
+if(isset($_SESSION['success']))
+
+?>
 
 
 <!------ Include the above in your HEAD tag ---------->
@@ -23,9 +27,24 @@
 
                             <p><span class="font-weight-bold">Phone:</span> 123456</p>
                             <p><span class="font-weight-bold">Email:</span><a href="#"> kuddus@mokbul.com</a></p>
-                            
-                            
-                            
+                            <p> <?php if(isset($_SESSION['admin_regi']))
+                                      {
+                                        echo $_SESSION['admin_regi'];
+                                        unset($_SESSION['admin_regi']);
+
+                                      }   
+                              ?> </p>
+                            <?php if(isset($_SESSION['success'])) : ?>
+                            <h5> 
+                                <?php 
+                                
+                                echo $_SESSION['success'];
+                                unset($_SESSION['success']);
+                                
+                                ?>
+                            </h5>
+                            <?php endif ?>
+                                                
                   
                   
                   
@@ -230,41 +249,41 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                                <form id = "addEmploye" method = "post" >
+                                <form id = "addEmploye" method = "post" action = "admin_server.php" >
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Employee Name</label>
-                                          <input type="text" class="form-control" id="eName" placeholder="First and Last Name">
+                                          <input type="text" name ="ename" class="form-control" id="eName" placeholder="First and Last Name">
                                         </div>
                                         <div class="form-group">
                                                 <label for="exampleFormControlInput1">Employee Designation</label>
-                                                <input type="text" class="form-control" id="edesignation" placeholder="Designation/title">
+                                                <input type="text" name = "etitle" class="form-control" id="edesignation" placeholder="Designation/title">
                                         </div>
                                         <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" id="e_email" aria-describedby="emailHelp" placeholder="Enter email">
+                                                <input type="email" name = "email" class="form-control" id="e_email" aria-describedby="emailHelp" placeholder="Enter email">
                                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                        </div>
                                         <div class="form-group">
                                                 <label for="exampleInputPassword1">Password</label>
-                                                <input type="password" class="form-control" id="ep1" placeholder="Password">
+                                                <input type="password" name = "p1" class="form-control" id="ep1" placeholder="Password">
                                          </div>
                                          <div class="form-group">
                                                 <label for="exampleInputPassword1"> Confirm Password</label>
-                                                <input type="password" class="form-control" id="ep2" placeholder="Password">
+                                                <input type="password" name = "p2" class="form-control" id="ep2" placeholder="Password">
                                          </div>
                                         
 
 
                                         <div class="form-group">
                                                 <label for="exampleFormControlFile1">Add Profile Picture</label >
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" >
                                               </div>
 
                                       </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" onclick= "employe_validation()" class="btn btn-primary">Add Employe Details to Database</button>
+                          <button type="submit" name ="a_regi" form = "addEmploye" onclick= "employe_validation()" class="btn btn-primary">Add Employe Details to Database</button>
                         </div>
                       </div>
                     </div>
