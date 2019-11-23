@@ -14,6 +14,7 @@ if(isset($_POST['alogin']))
 
 
 
+    
 
 
         $password = md5($pass);
@@ -22,6 +23,18 @@ if(isset($_POST['alogin']))
         if(mysqli_num_rows($result)){
             $_SESSION['email'] = $email;
             $_SESSION['success'] = "You are now logged IN";
+
+            if (mysqli_num_rows($result) >0) 
+            {
+            // output data of each row
+            while($row = mysqli_fetch_assoc($result)) 
+            {
+            $_SESSION['name'] = $row["name"];
+            $_SESSION['designation'] = $row["title"];
+            }
+            }
+
+
             header('location: admin.php');
         }
         else{
@@ -58,7 +71,7 @@ if(isset($_POST['a_regi'])){
         $password = md5($pass);
 
 
-        $sql = "INSERT INTO adminList (name, title, email, password )
+        $sql = "INSERT INTO adminList (name, title, email, passcode )
         VALUES ('$name', '$title', '$email', '$password')";
         if (mysqli_query($conn, $sql)) {
         //echo "New record created successfully";

@@ -55,7 +55,7 @@ if(isset($_SESSION['email'])){
 
 if(isset($_GET['logout'])){
     session_destroy();
-    unset($_SESSION['fname']);
+    unset($_SESSION['email']);
     header('location: index.php');
 }
 

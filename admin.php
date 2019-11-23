@@ -1,6 +1,7 @@
 <?php include ('admin_header.php'); 
 
-if(isset($_SESSION['success']))
+
+ 
 
 ?>
 
@@ -21,12 +22,12 @@ if(isset($_SESSION['success']))
                         <div class="media">
                           <img class="rounded-circle account-img" src="profile.png" width=" 250" height="250">
                           <div class="media-body" style="padding-left:25px;">
-                            <h2 class="account-heading">Mr. Kuddus</h2>
-                            <p class=" font-weight-bold">Employe</p>
-
+                            <h2 class="account-heading">Name: <?php  echo $_SESSION['name'];  ?></h2>
+                            <p class=" font-weight-bold">Designation: <?php echo $_SESSION['designation']; ?></p>
+                            
 
                             <p><span class="font-weight-bold">Phone:</span> 123456</p>
-                            <p><span class="font-weight-bold">Email:</span><a href="#"> kuddus@mokbul.com</a></p>
+                            <p><span class="font-weight-bold">Email: <?php echo $_SESSION['email']; ?></p>
                             <p> <?php if(isset($_SESSION['admin_regi']))
                                       {
                                         echo $_SESSION['admin_regi'];
