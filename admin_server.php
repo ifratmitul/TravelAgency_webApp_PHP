@@ -62,6 +62,7 @@ if(isset($_POST['a_regi'])){
     {
         if ($user['email'] == $email) {
             array_push($errors, "This Email already been used");
+            //$_SESSION['existing_email'] = "This email already exist.";
         }
 
     }

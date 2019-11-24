@@ -1,7 +1,21 @@
 <?php include ('admin_header.php'); 
 
 include('admin_server.php');
+
+
+
+if(!isset($_SESSION['email']))
+{
+  header('location: admin_login.php');
+}
  
+if(isset($_GET['alogout']))
+{
+  session_destroy();
+  unset($_SESSION['email']);
+  header('location: admin_login.php');
+}
+
 
 ?>
 <style>
@@ -72,7 +86,7 @@ include('admin_server.php');
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#booking_modal">Booking List</button>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#user_modal">User List</button>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#employe_modal">Add Employe</button>
-                                <button type="button" class="btn btn-primary btn-warning"> Log Out</button>
+                                <button type="button"   class="btn btn-primary btn-warning"><a href="admin.php?alogout='1'">Logout</a></button>
 
                             </div>
                                 
