@@ -1,10 +1,21 @@
 <?php include ('admin_header.php'); 
 
-
+include('admin_server.php');
  
 
 ?>
+<style>
+.card{
+  padding : 60px;
 
+}
+
+.menu{
+  padding: 30px;
+  padding-left: 60px;
+
+}
+</style>
 
 <!------ Include the above in your HEAD tag ---------->
 
@@ -13,9 +24,7 @@
 
 
         <div class="card" id = "admin_panel">
-                <div class="card-header ">
-
-                </div>
+               
                 <div class="card-body">
 
                     <div class="content-section">
@@ -27,9 +36,10 @@
                             
 
                             <p><span class="font-weight-bold">Phone:</span> 123456</p>
-                            <p><span class="font-weight-bold">Email: <?php echo $_SESSION['email']; ?></p>
+                            <p><span class="font-weight-bold">Email: <?php echo $_SESSION["email"]; ?></p>
                             <p> <?php if(isset($_SESSION['admin_regi']))
                                       {
+                                        //MSG to show successfull employe profile added to DB
                                         echo $_SESSION['admin_regi'];
                                         unset($_SESSION['admin_regi']);
 
@@ -38,7 +48,7 @@
                             <?php if(isset($_SESSION['success'])) : ?>
                             <h5> 
                                 <?php 
-                                
+                                //MSG to show after succesful login
                                 echo $_SESSION['success'];
                                 unset($_SESSION['success']);
                                 
@@ -53,7 +63,7 @@
                   
                   
                   
-                        <div class="col-md-4 align-right" >
+                        <div class="menu col-md-4 align-right" >
                           <div class="content-section">
                             <h3>Your Sidebar</h3>
                             <p class='text-muted'>
