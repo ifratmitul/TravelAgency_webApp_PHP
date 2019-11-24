@@ -1,4 +1,24 @@
-<?php include ('header.php'); ?>
+<?php include ('header.php');
+
+
+include('action_page.php');
+
+
+
+if(isset($_SESSION['email']))
+{
+  header('location: register.php');
+}
+ 
+if(isset($_GET['logout']))
+{
+  session_destroy();
+  unset($_SESSION['email']);
+  header('location: index.php');
+}
+
+
+?>
 
 <style>
 #pro{
@@ -45,32 +65,11 @@
     <!-- breadcrumb ends-->
         <!-- Profile card starts-->
 
-<?php 
 
 
-if(isset($_SESSION['email'])){
-    $_SESSION['msg'] = "You Must login to view this page";
-    header('location:register.php');
-}
 
-if(isset($_GET['logout'])){
-    session_destroy();
-    unset($_SESSION['email']);
-    header('location: index.php');
-}
 
-?>
 
-<?php if(isset($_SESSION['success'])) : ?>
-        <h5> 
-            <?php 
-            
-            echo $_SESSION['success'];
-            unset($_SESSION['success']);
-            
-            ?>
-        </h5>
-        <?php endif ?>
 
         <!--  Make sure profile cards contain padding of 80px around it.-->
         <section id = "pro">
@@ -84,16 +83,11 @@ if(isset($_GET['logout'])){
       <div class="card-body">
 
 
-      <?php if(isset($_SESSION['email'])) : ?>
-      <?php
-      $pull_data =  $_SESSION['email']; 
-      $sql =  "SELECT fname FROM userList WHERE email = '$pull_data'"; 
-      ?>
-        <h3 class="card-title" id = "uname"><?php echo $_SESSION['fname'];?> </h3>
+        <h3 class="card-title"><?php echo $_SESSION['fname'];?> </h3>
         <p id = "Email"> <?php echo $_SESSION['email'];?></p>
         <button class = "btn btn-warning">Edit Profile</button>
-        <button class = "btn btn-warning"><a href = "index.php?logout = '1'" ></a>Log Out</button>
-        <?php endif ?>    
+        <button class = "btn btn-warning"><a href = "index.php?logout = '1'" >Log Out</a></button>
+           
             </div>
             </div>
         </div>
