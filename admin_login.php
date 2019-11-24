@@ -10,14 +10,17 @@
 <style>
 .card
 { 
-        margin: 0 auto;
-        float: none;
-        padding-bottom: 10px;
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 100px; /* Added */
+        margin-top: 100px;
+        width:  500px;
 }
 </style>        
             
 
-                    <div class="card" style=" width: 500px; " >
+
+                          <div class="card">
                             <div class="card-body">
              
                                  <form id = "a_login" method = "post" action = "admin_server.php">
@@ -37,6 +40,11 @@
                             </div>
                         </div> 
              
+
+
+
+
+                    
 
            
 
