@@ -51,7 +51,7 @@ if(isset($_GET['alogout']))
 
                             <p><span class="font-weight-bold">Phone:</span> 123456</p>
                             <p><span class="font-weight-bold">Email: <?php echo $_SESSION["email"]; ?></p>
-                            <p><span class="font-weight-bold"> Last Login: <?php echo $_COOKIE['his']; ?></p>
+                            <p><span class="font-weight-bold"> Last Login: <?php echo $_SESSION['time']; ?></p>
                             <p> <?php if(isset($_SESSION['admin_regi']))
                                       {
                                         //MSG to show successfull employe profile added to DB
@@ -275,7 +275,7 @@ if(isset($_GET['alogout']))
                           </button>
                         </div>
                         <div class="modal-body">
-                                <form id = "addEmploye" method = "post" action = "admin_server.php" >
+                                <form id = "addEmploye" method = "post" action = "admin_server.php" enctype="multipart/form-data" >
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Employee Name</label>
                                           <input type="text" name ="ename" class="form-control" id="eName" placeholder="First and Last Name">
@@ -302,7 +302,7 @@ if(isset($_GET['alogout']))
 
                                         <div class="form-group">
                                                 <label for="exampleFormControlFile1">Add Profile Picture</label >
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" >
+                                                <input type="file" name ="image"class="form-control-file" id="exampleFormControlFile1" >
                                               </div>
 
                                       </form>
@@ -317,3 +317,4 @@ if(isset($_GET['alogout']))
 
 
                <!-- Add Employe Modal Ends-->
+   
