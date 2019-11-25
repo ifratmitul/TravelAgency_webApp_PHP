@@ -3,6 +3,7 @@ include('connection.php');
 session_start();
 
 $errors = array();
+$loginTime = array();
 
 
 if(isset($_POST['alogin']))
@@ -23,6 +24,15 @@ if(isset($_POST['alogin']))
         if(mysqli_num_rows($result)){
             $_SESSION['email'] = $email;
             $_SESSION['success'] = "You are now logged IN";
+            //date_default_timezone_set("America/New_York");
+            //array_push($loginTime, date("h:i:sa"));
+            //$_SESSION['time'] = loginTime[1];
+            //$cookie_name = "user";
+            //$cookie_value = loginTime[1];
+            //setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+            //$_COOKIE['time'] = $_COOKIE[$cookie_name]; 
+
 
             if (mysqli_num_rows($result) >0) 
             {

@@ -1,6 +1,6 @@
 <?php include ('admin_header.php'); 
 
-include('admin_server.php');
+//include('admin_server.php');
 
 
 
@@ -51,6 +51,7 @@ if(isset($_GET['alogout']))
 
                             <p><span class="font-weight-bold">Phone:</span> 123456</p>
                             <p><span class="font-weight-bold">Email: <?php echo $_SESSION["email"]; ?></p>
+                            <p><span class="font-weight-bold"> Last Login: <?php echo $_COOKIE['his']; ?></p>
                             <p> <?php if(isset($_SESSION['admin_regi']))
                                       {
                                         //MSG to show successfull employe profile added to DB
