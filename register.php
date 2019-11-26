@@ -40,7 +40,7 @@
                 <h4 id = "error"></h4>
 
               </form>
-              <button type="submit" name= "login_user" form = "login_f"  class="btn btn-primary float-right">Login</button>
+              <button type="submit" name= "ulogin" form = "login_f"  class="btn btn-primary float-right">Login</button>
               </div>
               <div class = "card-footer justify-content-center ">
               <h4 class =" container text-center">Or Login With Google</h4>

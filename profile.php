@@ -1,22 +1,21 @@
 <?php include ('header.php');
+//include('action_page.php');
 
+//session_start();
 
-include('action_page.php');
-
-
-
-if(isset($_SESSION['email']))
+if(!isset($_SESSION['uemail']))
 {
   header('location: register.php');
 }
  
-if(isset($_GET['logout']))
+if(isset($_GET['ulogout']))
 {
-  session_destroy();
-  unset($_SESSION['email']);
-  header('location: index.php');
-}
+    session_destroy();
+    unset($_SESSION['uemail']);
+    header('location: index.php');
 
+
+}
 
 ?>
 
@@ -84,9 +83,10 @@ if(isset($_GET['logout']))
 
 
         <h3 class="card-title"><?php echo $_SESSION['fname'];?> </h3>
-        <p id = "Email"> <?php echo $_SESSION['email'];?></p>
+        <p id = "Email"> <?php echo $_SESSION['uemail'];?></p>
         <button class = "btn btn-warning">Edit Profile</button>
-        <button class = "btn btn-warning"><a href = "index.php?logout = '1'" >Log Out</a></button>
+        <button type="button"   class="btn btn-primary btn-warning"><a href="profile.php?ulogout='1'">Logout</a></button>
+
            
             </div>
             </div>

@@ -1,8 +1,8 @@
 <?php 
-
+    
 
 include ('connection.php');
-
+session_start();
 
 if(isset($_POST['u_regi'])){
     $errors = array(); 
@@ -20,12 +20,7 @@ if(isset($_POST['u_regi'])){
     if(empty ($email)) {array_push ($errors, "Fname required");}
     if(empty ($address)) {array_push ($errors, "Fname required");}
 
-    //$fname  = $_POST["fname"];
-    //$lname  = $_POST["lname"];
-    //$pass = $_POST["p2"];
-    //$email  = $_POST["email"];
-    //$address  = $_POST["address"];
-    
+
 
 
     //check DB for exisiting Email
@@ -44,13 +39,12 @@ if(isset($_POST['u_regi'])){
     {
         $password = md5($pass);
 
-        //Neeed to change pic t varchar and at this moment Address is going into pic colm.
+
         $sql = "INSERT INTO userList (Fname, Lname, pass, email, address)
         VALUES ('$fname', '$lname', '$password', '$email', '$address')";
         if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
-        $_SESSION['fname'] =  $fname;
-        $_SESSION['success'] = "You are now logged in";
+
         echo "Data enttry Successful";
         //header('location: profile.php');
         } else {
@@ -63,24 +57,31 @@ if(isset($_POST['u_regi'])){
    
 //login user : 
 
-if(isset($_POST['login_user']))
+if(isset($_POST['ulogin']))
 {
-
-
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $pass = mysqli_real_escape_string($conn, $_POST['pass1']);
+    $passwd = mysqli_real_escape_string($conn, $_POST['pass1']);
 
 
 
     
 
 
-        $password = md5($pass); //neeed to change some DB col name
-        $query =  "SELECT * FROM userList WHERE email = '$email' AND pass = '$password'";
+        $password = md5($passwd);
+        $query =  "SELECT * FROM userlist WHERE  pass = '$password' AND email = '$email' ";
         $result =  mysqli_query($conn, $query);
         if(mysqli_num_rows($result)){
-            $_SESSION['email'] = $email;
+            $_SESSION['uemail'] = $email;
             $_SESSION['success'] = "You are now logged IN";
+            //date_default_timezone_set("America/New_York");
+            //array_push($loginTime, date("h:i:sa"));
+            //$_SESSION['time'] = $loginTime[1];
+            //$cookie_name = "user";
+            //$cookie_value = date("h:i:sa");
+            //setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+
+            //$_SESSION['time'] = $_COOKIE[$cookie_name]; 
+
 
             if (mysqli_num_rows($result) >0) 
             {
@@ -88,8 +89,8 @@ if(isset($_POST['login_user']))
             while($row = mysqli_fetch_assoc($result)) 
             {
             $_SESSION['fname'] = $row["Fname"];
-            //$_SESSION['lname'] = $row["Lname"];
 
+            $_SESSION['lname'] = $row["Lname"];
             }
             }
 
@@ -102,6 +103,7 @@ if(isset($_POST['login_user']))
         }
     
 
+    
 
 }
 

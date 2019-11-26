@@ -1,5 +1,8 @@
 
-<?php include ('connection.php');?>
+<?php include ('connection.php');
+include ('action_page.php');
+
+?>
 
 <!doctype html>
 <html lang="en">
