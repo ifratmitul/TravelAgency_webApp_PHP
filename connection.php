@@ -6,7 +6,7 @@ $username = "root";
 $password = "";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, "tempdb");
+$conn = new mysqli($servername, $username, $password, "MainDB");
 
 // Check connection
 if ($conn->connect_error) {

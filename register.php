@@ -25,6 +25,15 @@
             <div class = "card" style = " padding : 20px">
               <div class = "card-header container">
                 <h3 class = "text-center">Already have an accnount? Login</h3>
+                <h4> <?php   
+                    if(isset($_SESSION['regicom']))
+                    {
+                      echo $_SESSION['regicom'];
+                      unset($_SESSION['regicom']);
+                    }
+                
+                
+                ?></h4>
               </div>
               <div class = "card-body">
               <form id ="login_f" method = "post" action = "action_page.php">
@@ -80,15 +89,9 @@
                         <div class="modal-body">
                             <form id = "regi_form" method = "post" action = "action_page.php">
 
-                              <div class="form-row">
-                                 <div class="form-group col-md-6">
-                                    <label for="inputEmail4">First Name</label>
-                                    <input type="text" class="form-control" name = "fname" id="Fname" placeholder="Your First Name" required>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                    <label for="inputPassword4">Last Name</label>
-                                    <input type="text" class="form-control" name = "lname" id="Lname" placeholder="Your Last Name" required>
-                                    </div>
+                            <div class="form-group">
+                                  <label for="inputAddress">Name</label>
+                                  <input type="text" name = "name" class="form-control" id="add" placeholder="Enter your full name">
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
@@ -104,10 +107,11 @@
                                     <label for="inputAddress">Email</label>
                                     <input type="email" class="form-control" name = "email" id="r_email" placeholder="Email Address">
                                 </div>
+
                                 <div class="form-group">
-                                  <label for="inputAddress">Address</label>
-                                  <input type="text" name = "address" class="form-control" id="add" placeholder="block, Street">
-                                </div>
+                                    <label for="exampleFormControlFile1">Add Profile Picture</label >
+                                    <input type="file" id ="image" name ="image"class="form-control-file" id="exampleFormControlFile1" >
+                                  </div>
                                 
 
 

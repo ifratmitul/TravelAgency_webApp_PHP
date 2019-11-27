@@ -8,23 +8,16 @@ if(isset($_POST['u_regi'])){
     $errors = array(); 
 
 
-    $fname  = mysqli_real_escape_string($conn, $_POST['fname']);
-    $lname  = mysqli_real_escape_string($conn, $_POST['lname']);
+    $name  = mysqli_real_escape_string($conn, $_POST['name']);
+
     $pass  = mysqli_real_escape_string($conn, $_POST['p2']);
     $email  = mysqli_real_escape_string($conn, $_POST['email']);
-    $address  = mysqli_real_escape_string($conn, $_POST['address']);
-
-    if(empty ($fname)) {array_push ($errors, "Fname required");}
-    if(empty ($lname)) {array_push ($errors, "Fname required");}
-    if(empty ($pass)) {array_push ($errors, "Fname required");}
-    if(empty ($email)) {array_push ($errors, "Fname required");}
-    if(empty ($address)) {array_push ($errors, "Fname required");}
-
+    $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"])); 
 
 
 
     //check DB for exisiting Email
-    $Email_check = "SELECT * FROM userList where email = '$email' LIMIT 1 ";
+    $Email_check = "SELECT * FROM userlist where email = '$email' LIMIT 1 ";
     $result = mysqli_query($conn, $Email_check);
     $user = mysqli_fetch_assoc($result);
     if($user)
@@ -40,13 +33,11 @@ if(isset($_POST['u_regi'])){
         $password = md5($pass);
 
 
-        $sql = "INSERT INTO userList (Fname, Lname, pass, email, address)
-        VALUES ('$fname', '$lname', '$password', '$email', '$address')";
+        $sql = "INSERT INTO userlist (name,password, email, picture)
+        VALUES ('$name', '$password', '$email', '$file')";
         if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
-
-        echo "Data enttry Successful";
-        //header('location: profile.php');
+        $_SESSION['regicom'] = "Registration Successful, you can login now.";    
+        header('location: register.php');
         } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
@@ -68,7 +59,7 @@ if(isset($_POST['ulogin']))
 
 
         $password = md5($passwd);
-        $query =  "SELECT * FROM userlist WHERE  pass = '$password' AND email = '$email' ";
+        $query =  "SELECT * FROM userlist WHERE  password = '$passwd' AND email = '$email' ";
         $result =  mysqli_query($conn, $query);
         if(mysqli_num_rows($result)){
             $_SESSION['uemail'] = $email;
@@ -88,9 +79,9 @@ if(isset($_POST['ulogin']))
             // output data of each row
             while($row = mysqli_fetch_assoc($result)) 
             {
-            $_SESSION['fname'] = $row["Fname"];
+            $_SESSION['fname'] = $row["name"];
 
-            $_SESSION['lname'] = $row["Lname"];
+            //$_SESSION['lname'] = $row["Lname"];
             }
             }
 

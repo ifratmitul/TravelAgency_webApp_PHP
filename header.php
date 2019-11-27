@@ -79,7 +79,10 @@ include ('action_page.php');
                                     </li>
                                     <li class="nav-item">
 
-                                        <a class="nav-link" href="register.php">Sign Up/Login</a>
+                                    <a class="nav-link" href="register.php">Login/Register</a>
+
+                                                                
+
                                     </li>
                                 </ul>
                             </div>
