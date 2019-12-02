@@ -59,7 +59,7 @@ if(isset($_POST['ulogin']))
 
 
         $password = md5($passwd);
-        $query =  "SELECT * FROM userlist WHERE  password = '$passwd' AND email = '$email' ";
+        $query =  "SELECT * FROM userlist WHERE  password = '$password' AND email = '$email' ";
         $result =  mysqli_query($conn, $query);
         if(mysqli_num_rows($result)){
             $_SESSION['uemail'] = $email;

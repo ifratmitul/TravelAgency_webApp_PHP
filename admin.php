@@ -123,11 +123,11 @@ if(isset($_GET['alogout']))
                                 <form id = "adPackage" method = "post">
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Package Title</label>
-                                          <input type="text" class="form-control" id="p_title" placeholder="Title">
+                                          <input type="text" name="ptitle" class="form-control" id="p_title" placeholder="Title">
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlSelect1">Package Location</label>
-                                          <select class="form-control" id="p_location" required>
+                                          <select name="location" class="form-control" id="p_location" required>
                                           <option >Select Location</option>
                                             <option >Bangladesh</option>
                                             <option>Hong Kong</option>
@@ -138,24 +138,24 @@ if(isset($_GET['alogout']))
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Hotel</label>
-                                          <input type="text" class="form-control" id="p_hotel" placeholder="Title">
+                                          <input type="text" name="hotel" class="form-control" id="p_hotel" placeholder="Hotel name">
                                         </div>
                                         
                                         <div class="form-group">
                                           <label for="exampleFormControlTextarea1">Details</label>
-                                          <textarea class="form-control" id="p_details" rows="3"></textarea>
+                                          <textarea name = "pdetails"class="form-control" id="p_details" rows="3"></textarea>
                                         </div>
 
                                         <div class="form-group">
                                                 <label for="exampleFormControlFile1">Add Location Picture</label>
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                                                <input type="file" name="pimage"class="form-control-file" id="exampleFormControlFile1" required>
                                               </div>
 
                                       </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" form = "adPackage" onclick = "pack_validation()"class="btn btn-primary">Add to Database</button>
+                          <button type="submit" name ="adpack" form = "adPackage" onclick = "pack_validation()"class="btn btn-primary">Add to Database</button>
                         </div>
                       </div>
                     </div>

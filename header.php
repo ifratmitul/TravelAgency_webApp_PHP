@@ -79,7 +79,17 @@ include ('action_page.php');
                                     </li>
                                     <li class="nav-item">
 
-                                    <a class="nav-link" href="register.php">Login/Register</a>
+
+                                    <?php if(isset($_SESSION['uemail']))
+                                     {  ?>
+                                    <a class = "nav-link" href="profile.php">Profile</a>
+                                        <?php }else
+                                    {
+                                    ?> <a class="nav-link" href="register.php">Login/Register</a><?php
+                                    }
+                                     ?>
+
+
 
                                                                 
 
