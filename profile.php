@@ -90,7 +90,7 @@ if(isset($_GET['ulogout']))
 
         <h3 class="card-title"><?php echo $_SESSION['fname'];?> </h3>
         <p id = "Email"> <?php echo $_SESSION['uemail'];?></p>
-        <button class = "btn btn-warning">Edit Profile</button>
+        <button class = "btn btn-warning"><a href = "logout.php">Logout</a></button>
         <button type="button"   class="btn btn-primary btn-warning"><a href="profile.php?ulogout='1'">Logout</a></button>
 
            

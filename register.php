@@ -36,7 +36,7 @@
                 ?></h4>
               </div>
               <div class = "card-body">
-              <form id ="login_f" method = "post" action = "action_page.php">
+              <form id ="login_f" method = "post" action = "action_page.php" >
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
                   <input type="email" name  = "email" class="form-control" id="u-email" aria-describedby="emailHelp" placeholder="Enter email" required>
@@ -87,7 +87,7 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                            <form id = "regi_form" method = "post" action = "action_page.php">
+                            <form id = "regi_form" method = "post" action = "action_page.php" enctype="multipart/form-data" >
 
                             <div class="form-group">
                                   <label for="inputAddress">Name</label>
