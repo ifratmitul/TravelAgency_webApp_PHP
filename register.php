@@ -54,6 +54,7 @@
               <div class = "card-footer justify-content-center ">
               <h4 class =" container text-center">Or Login With Google</h4>
                <div class = "g-signin2 " data-onsuccess = "onSignIn"></div>
+               <button onclick = "signOut()">Sign out</button>
               </div>
             </div>
       
