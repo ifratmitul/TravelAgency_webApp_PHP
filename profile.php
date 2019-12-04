@@ -81,7 +81,7 @@ if(isset($_GET['ulogout']))
         <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="" id  = "p_card">
           <div class="row no-gutters">
           <div class="col-md-4">
-          <img class="rounded-circle account-img card-img" src="profile.png" id  ="pic">
+          <?php echo '<img class="rounded-circle account-img" src = "data:image/jpeg;base64,'.base64_encode($_SESSION['upic'] ).'" width=" 250" height="250">' ?>
         </div>
     <div class="col-md-8">
 
@@ -90,8 +90,11 @@ if(isset($_GET['ulogout']))
 
         <h3 class="card-title"><?php echo $_SESSION['fname'];?> </h3>
         <p id = "Email"> <?php echo $_SESSION['uemail'];?></p>
+
+        <p> <?php if(isset($_SESSION['blogged'])) { echo $_SESSION['blogged'];
+                                        unset($_SESSION['blogged']); } ?></p>
         <button class = "btn btn-warning"><a href = "logout.php">Logout</a></button>
-        <button type="button"   class="btn btn-primary btn-warning"><a href="profile.php?ulogout='1'">Logout</a></button>
+
 
            
             </div>

@@ -43,13 +43,14 @@ if(isset($_GET['alogout']))
 
                     <div class="content-section">
                         <div class="media">
-                          <img class="rounded-circle account-img" src="profile.png" width=" 250" height="250">
+                        
+                          <?php echo '<img class="rounded-circle account-img" src = "data:image/jpeg;base64,'.base64_encode($_SESSION['pic'] ).'" width=" 250" height="250">' ?>
                           <div class="media-body" style="padding-left:25px;">
                             <h2 class="account-heading">Name: <?php  echo $_SESSION['name'];  ?></h2>
                             <p class=" font-weight-bold">Designation: <?php echo $_SESSION['designation']; ?></p>
                             
 
-                            <p><span class="font-weight-bold">Phone:</span> 123456</p>
+
                             <p><span class="font-weight-bold">Email: <?php echo $_SESSION["email"]; ?></p>
                             <p><span class="font-weight-bold"> Last Login: <?php echo $_SESSION['time']; ?></p>
                             <p> <?php if(isset($_SESSION['admin_regi']))
@@ -59,6 +60,16 @@ if(isset($_GET['alogout']))
                                         unset($_SESSION['admin_regi']);
 
                                       }   
+                                      if(isset($_SESSION['p']))
+                                      {
+                                        //MSG to show successfull package added to DB
+                                        echo $_SESSION['p'];
+                                        unset($_SESSION['p']);
+
+                                      }
+                              
+                              
+                              
                               ?> </p>
                             <?php if(isset($_SESSION['success'])) : ?>
                             <h5> 
@@ -120,7 +131,7 @@ if(isset($_GET['alogout']))
                           </button>
                         </div>
                         <div class="modal-body">
-                                <form id = "adPackage" method = "post">
+                                <form id = "adPackage" method = "post" action = "admin_server.php" enctype="multipart/form-data" >
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Package Title</label>
                                           <input type="text" name="ptitle" class="form-control" id="p_title" placeholder="Title">
@@ -128,17 +139,21 @@ if(isset($_GET['alogout']))
                                         <div class="form-group">
                                           <label for="exampleFormControlSelect1">Package Location</label>
                                           <select name="location" class="form-control" id="p_location" required>
-                                          <option >Select Location</option>
-                                            <option >Bangladesh</option>
-                                            <option>Hong Kong</option>
-                                            <option>USA</option>
-                                            <option>Uk</option>
-                                            <option>Germeny</option>
+                                          
+                                            <option name = "location1">Bangladesh</option>
+                                            <option name = "location2">Hong Kong</option>
+                                            <option name = "location3">USA</option>
+                                            <option name = "location4">Uk</option>
+                                            <option name = "location5">Germeny</option>
                                           </select>
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Hotel</label>
                                           <input type="text" name="hotel" class="form-control" id="p_hotel" placeholder="Hotel name">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleFormControlInput1">Maximum Number of Traveler</label>
+                                          <input type="number" name="traveler" class="form-control" id="p_hotel" placeholder="Hotel name">
                                         </div>
                                         
                                         <div class="form-group">
@@ -170,7 +185,7 @@ if(isset($_GET['alogout']))
 
                <!--Booking List Modal Starts-->
                <div class="modal fade" id="booking_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLabel">Booking History</h5>
@@ -302,7 +317,7 @@ if(isset($_GET['alogout']))
 
                                         <div class="form-group">
                                                 <label for="exampleFormControlFile1">Add Profile Picture</label >
-                                                <input type="file" name ="image"class="form-control-file" id="exampleFormControlFile1" >
+                                                <input type="file" name ="aimage"class="form-control-file" id="exampleFormControlFile1" >
                                               </div>
 
                                       </form>

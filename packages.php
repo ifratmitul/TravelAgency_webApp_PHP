@@ -80,38 +80,7 @@
 						<button class="btn btn-info" data-toggle="modal" data-target="#myModal">See Details</button> <span></span> <button class="btn  btn-warning">Book Now</button>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/single_place_3.png" alt="">
-                        
-                        <div class="hotel_text_iner">
-                            <h3> Bali Trip</h3>
-
-                            <p>London, United Kingdom</p>
-                            <p>Date: 23 Aug 2019</p>
-                            <p>Duration: 5 days</p>
-                            <h5>From <span>$500</span></h5>
-                        </div>
-						<button class="btn btn-info" data-toggle="modal" data-target="#myModal">See Details</button> <span></span> <button class="btn btn-warning">Book Now</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/single_place_2.png" alt="">
-                        
-                        <div class="hotel_text_iner">
-                            <h3> <a href="#"> Greece Tour</a></h3>
-
-                            <p>London, United Kingdom</p>
-                            <p>Date: 23 Aug 2019</p>
-                            <p>Duration: 5 days</p>
-                            <h5>From <span>$500</span></h5>
-                        </div>
-						<button class="btn btn-info" data-toggle="modal" data-target="#myModal">See Details</button> <span></span> <button class="btn btn-warning">Book Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+               
     </section>
 
 

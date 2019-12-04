@@ -80,6 +80,7 @@ if(isset($_POST['ulogin']))
             while($row = mysqli_fetch_assoc($result)) 
             {
             $_SESSION['fname'] = $row["name"];
+            $_SESSION['upic'] = $row['picture'];
 
             //$_SESSION['lname'] = $row["Lname"];
             }
@@ -95,6 +96,31 @@ if(isset($_POST['ulogin']))
     
 
     
+
+}
+
+
+
+if(isset($_POST['adblog']))
+{
+
+    $btitle = mysqli_real_escape_string($conn, $_POST['btitle']);
+    $blocation  = mysqli_real_escape_string($conn, $_POST['location']);
+    $details  = mysqli_real_escape_string($conn, $_POST['bdetails']);
+    $file = addslashes(file_get_contents($_FILES["bimage"]["tmp_name"]));
+    $email = $_SESSION['uemail'];
+
+
+    $sql = "INSERT INTO blog (b_title,location, b_details, user_email, image)
+    VALUES ('$btitle', '$blocation', '$details','$email', '$file')";
+    if (mysqli_query($conn, $sql)) {
+    $_SESSION['blogged'] = "your blog is successfully posted !";    
+    header('location: profile.php');
+    } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+
 
 }
 

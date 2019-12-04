@@ -41,7 +41,17 @@
     </li>
     <li class="nav-item" >
 
-    <button class = "btn btn-info" data-toggle="modal" data-target="#myModal" > Create your own Blog</button>
+    <?php if(isset($_SESSION['uemail']))
+                                     {  ?>
+
+                                    <button class = "btn btn-info" data-toggle="modal" data-target="#myModal" > Create your own Blog</button>
+                                        <?php }else
+                                    {
+                                    ?> <a class="nav-link" href="register.php">Login To create your own blog</a><?php
+                                    }
+                                     ?>
+
+
 
     </li>
 
@@ -120,7 +130,7 @@
 
                       <!-- Modal -->
                       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLabel">Create your Blog</h5>
@@ -129,39 +139,39 @@
                           </button>
                         </div>
                         <div class="modal-body">
-                                <form id = "adPackage" method = "post">
+                                <form id = "adblg" method = "post" action = "action_page.php" enctype="multipart/form-data">
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Blog Title</label>
-                                          <input type="text" class="form-control" id="p_title" placeholder="Title">
+                                          <input type="text" name = "btitle" class="form-control" id="p_title" placeholder="Title">
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlSelect1">Location</label>
-                                          <select class="form-control" id="p_location" required>
-                                          <option >Select Location</option>
-                                            <option >Bangladesh</option>
-                                            <option>Hong Kong</option>
-                                            <option>USA</option>
-                                            <option>Uk</option>
-                                            <option>Germeny</option>
+                                          <select class="form-control" name = "location" id="p_location" required>
+                                          
+                                            <option name ="location1" >Bangladesh</option>
+                                            <option name ="location2" >Hong Kong</option>
+                                            <option name ="location3" >USA</option>
+                                            <option name ="location4" >Uk</option>
+                                            <option name ="location5" >Germeny</option>
                                           </select>
                                         </div>
 
                                         
                                         <div class="form-group">
                                           <label for="exampleFormControlTextarea1">Details</label>
-                                          <textarea class="form-control" id="p_details" rows="3"></textarea>
+                                          <textarea class="form-control" name = "bdetails" id="p_details" rows="3"></textarea>
                                         </div>
 
                                         <div class="form-group">
                                                 <label for="exampleFormControlFile1">Add Location Picture</label>
-                                                <input type="file" class="form-control-file" id="exampleFormControlFile1" required>
+                                                <input type="file" name ="bimage" class="form-control-file" id="exampleFormControlFile1" required>
                                               </div>
 
                                       </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="submit" form = "adPackage" onclick = "pack_validation()"class="btn btn-primary">Post</button>
+                          <button type="submit" name = "adblog"form = "adblg" onclick = "pack_validation()"class="btn btn-primary">Post</button>
                         </div>
                       </div>
                     </div>
