@@ -144,7 +144,7 @@ if(isset($_GET['alogout']))
                                             <option name = "location2">Hong Kong</option>
                                             <option name = "location3">USA</option>
                                             <option name = "location4">Uk</option>
-                                            <option name = "location5">Germeny</option>
+                                            <option name = "location5">Europe</option>
                                           </select>
                                         </div>
                                         <div class="form-group">
@@ -153,7 +153,11 @@ if(isset($_GET['alogout']))
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Maximum Number of Traveler</label>
-                                          <input type="number" name="traveler" class="form-control" id="p_hotel" placeholder="Hotel name">
+                                          <input type="number" name="traveler" class="form-control" id="p_hotel" placeholder="Maximum number of traveler allowed">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleFormControlInput1">Cost</label>
+                                          <input type="number" name="price" class="form-control" id="p_hotel" placeholder="Total Amount">
                                         </div>
                                         
                                         <div class="form-group">

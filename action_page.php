@@ -124,6 +124,18 @@ if(isset($_POST['adblog']))
 
 }
 
+//cart and package loading stuff
+
+$query = "SELECT * FROM packagelist ORDER BY id ASC";
+$result =  mysqli_query($conn, $query);
+//$statement = $conn->prepare($query);
+//$statement->execute();
+//$result = $statement->fetchAll();
+
+
+//$query =  "SELECT * FROM userlist WHERE  password = '$password' AND email = '$email' ";
+//$result =  mysqli_query($conn, $query);
+
 
 
 

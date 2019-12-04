@@ -113,11 +113,12 @@ if(isset($_POST['adpack']))
     $traveler  = mysqli_real_escape_string($conn, $_POST['traveler']);
     $details  = mysqli_real_escape_string($conn, $_POST['pdetails']);
     $file = addslashes(file_get_contents($_FILES["pimage"]["tmp_name"]));
+    $cost = mysqli_real_escape_string($conn, $_POST['price']);
     
 
 
-    $sql = "INSERT INTO packagelist (title,location, hotel,no_of_traveler, details, picture)
-    VALUES ('$ptitle', '$plocation','$hotel', '$traveler', '$details','$file')";
+    $sql = "INSERT INTO packagelist (title,location, hotel,no_of_traveler, details, picture,Price)
+    VALUES ('$ptitle', '$plocation','$hotel', '$traveler', '$details','$file', '$cost')";
     if (mysqli_query($conn, $sql)) {
     $_SESSION['p'] = "New package successfully added to DB !";    
     header('location: admin.php');

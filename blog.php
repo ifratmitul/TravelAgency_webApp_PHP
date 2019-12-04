@@ -42,14 +42,13 @@
     <li class="nav-item" >
 
     <?php if(isset($_SESSION['uemail']))
-                                     {  ?>
-
-                                    <button class = "btn btn-info" data-toggle="modal" data-target="#myModal" > Create your own Blog</button>
-                                        <?php }else
-                                    {
-                                    ?> <a class="nav-link" href="register.php">Login To create your own blog</a><?php
-                                    }
-                                     ?>
+         {  ?>
+          <button class = "btn btn-info" data-toggle="modal" data-target="#myModal" > Create your own Blog</button>
+          <?php }else
+           {
+           ?> <a class="nav-link" href="register.php">Login To create your own blog</a><?php
+            } 
+        ?>
 
 
 
