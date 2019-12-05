@@ -5,12 +5,6 @@
 
 
 
-
-
-
-
-
-
 ?>
 
 <style>
@@ -54,6 +48,8 @@
     </li>
 
 
+
+
   </ul> 
 
    
@@ -90,7 +86,7 @@
                 ?> 
 
                     <div class="col-lg-4 col-sm-6">
-                    <form id = "pack"action="" method = "post">
+                    <form  method = "post" action = "action_page.php">
                         <div class="single_ihotel_list">
                     <?php echo '<img  src = "data:image/jpeg;base64,'.base64_encode($row["picture"] ).'"height = "300" > '  ?>
                             <div class="hotel_text_iner">
@@ -151,40 +147,80 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6">
                     <div class="section_tittle text-center">
-                        <h2>We offered best services</h2>
-                        <p>Waters make fish every without firmament saw had. Morning air subdue. Our. Air very one. Whales grass is fish whales winged.</p>
+                        <h2>Cart</h2>
+
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/services_1.png" alt="">
-                        <h3> <a href="#"> Transportation</a></h3>
-                        <p>All transportation cost we bear</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/services_2.png" alt="">
-                        <h3> <a href="#"> Guidence</a></h3>
-                        <p>We offer the best guidence for you</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/services_3.png" alt="">
-                        <h3> <a href="#"> Accomodation</a></h3>
-                        <p>Luxarious and comfortable</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_ihotel_list">
-                        <img src="img/services_4.png" alt="">
-                        <h3> <a href="#"> Discover world</a></h3>
-                        <p>Best tour plan for your next tour</p>
-                    </div>
-                </div>
+                                                    <h3>Order Details</h3>
+                                        <div class="table-responsive">
+                                        <?php echo $message; ?>
+                                        <div align="right">
+                                            <a href="index.php?action=clear"><b>Clear Cart</b></a>
+                                        </div>
+                                        <table class="table table-bordered">
+                                            <tr>
+                                            <th width="40%">Item Name</th>
+                                            <th width="10%">Quantity</th>
+                                            <th width="20%">Price</th>
+                                            <th width="15%">Total</th>
+                                            <th width="5%">Action</th>
+                                            </tr>
+                                        <?php
+                                        if(isset($_COOKIE["shopping_cart"]))
+                                        {
+                                            $total = 0;
+                                            $cookie_data = stripslashes($_COOKIE['shopping_cart']);
+                                            $cart_data = json_decode($cookie_data, true);
+                                            foreach($cart_data as $keys => $values)
+                                            {
+                                        ?>
+                                            <tr>
+                                            <td><?php echo $values["item_name"]; ?></td>
+                                            <td><?php echo $values["item_quantity"]; ?></td>
+                                            <td>$ <?php echo $values["item_price"]; ?></td>
+                                            <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+                                            <td><a href="packages.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                                            </tr>
+                                        <?php 
+                                            $total = $total + ($values["item_quantity"] * $values["item_price"]);
+                                            }
+                                        ?>
+                                            <tr>
+                                            <td colspan="3" align="right">Total</td>
+                                            <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                                            <td></td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        else
+                                        {
+                                            echo '
+                                            <tr>
+                                            <td colspan="5" align="center">No Item in Cart</td>
+                                            </tr>
+                                            ';
+                                        }
+                                        ?>
+                                        <tr><td colspan = 5> 
+                                        <?php if(isset($_SESSION['uemail']))
+                                         {  ?>
+                                        <button class = "btn btn-primary btn-block " float = "right">Pay now</button>
+                                        <?php }else
+                                        {
+                                        ?> <a class="nav-link alert alert-info" href="register.php">Please login to complete your purchase</a><?php
+                                         }
+                                        ?>
+
+                                        
+                                        
+                                        </td></tr>
+                                        </table>
+
+                                        </div>
+                                        </div>
+
             </div>
         </div>
     </section>
@@ -233,6 +269,100 @@
                   
                   
                   <!--modal-->
+
+                  <!-- Cart modal start -->
+
+                  <div class="modal fade" id="cart_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Booking Cart </h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+
+                                        <h3>Order Details</h3>
+                                        <div class="table-responsive">
+                                        <?php echo $message; ?>
+                                        <div align="right">
+                                            <a href="index.php?action=clear"><b>Clear Cart</b></a>
+                                        </div>
+                                        <table class="table table-bordered">
+                                            <tr>
+                                            <th width="40%">Item Name</th>
+                                            <th width="10%">Quantity</th>
+                                            <th width="20%">Price</th>
+                                            <th width="15%">Total</th>
+                                            <th width="5%">Action</th>
+                                            </tr>
+                                        <?php
+                                        if(isset($_COOKIE["shopping_cart"]))
+                                        {
+                                            $total = 0;
+                                            $cookie_data = stripslashes($_COOKIE['shopping_cart']);
+                                            $cart_data = json_decode($cookie_data, true);
+                                            foreach($cart_data as $keys => $values)
+                                            {
+                                        ?>
+                                            <tr>
+                                            <td><?php echo $values["item_name"]; ?></td>
+                                            <td><?php echo $values["item_quantity"]; ?></td>
+                                            <td>$ <?php echo $values["item_price"]; ?></td>
+                                            <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+                                            <td><a href="packages.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                                            </tr>
+                                        <?php 
+                                            $total = $total + ($values["item_quantity"] * $values["item_price"]);
+                                            }
+                                        ?>
+                                            <tr>
+                                            <td colspan="3" align="right">Total</td>
+                                            <td align="right">$ <?php echo number_format($total, 2); ?></td>
+                                            <td></td>
+                                            </tr>
+                                        <?php
+                                        }
+                                        else
+                                        {
+                                            echo '
+                                            <tr>
+                                            <td colspan="5" align="center">No Item in Cart</td>
+                                            </tr>
+                                            ';
+                                        }
+                                        ?>
+
+                                        <tr><td colspan = 5> 
+                                        <?php if(isset($_SESSION['uemail']))
+                                         {  ?>
+                                        <button class = "btn btn-primary btn-block " float = "right">Pay now</button>
+                                        <?php }else
+                                        {
+                                        ?> <a class="nav-link alert alert-info" href="register.php">Please login to complete your purchase</a><?php
+                                         }
+                                        ?>
+
+                                        
+                                        
+                                        </td></tr>
+                                        </table>
+                                        </div>
+                                        </div>
+
+                                                      
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>                     
+
+
+                  <!-- Cart modal end  -->
 
 
  

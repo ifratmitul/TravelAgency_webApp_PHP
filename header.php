@@ -38,6 +38,12 @@ include ('action_page.php');
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
     <meta name="google-signin-client_id" content="320419427254-hqom6n2860fghpig1c13vhcog5v1b0ul.apps.googleusercontent.com">
     <script src = "script.js"></script>
 </head>
@@ -93,6 +99,12 @@ include ('action_page.php');
 
                                                                 
 
+                                    </li>
+
+                                    <li class="nav-item">
+                                    <button type="button" class="btn btn-default btn-sm nav-link" data-toggle="modal" data-target="#cart_modal">
+                                    <span class="glyphicon glyphicon-shopping-cart"></span> Cart
+                                    </button>
                                     </li>
                                 </ul>
                             </div>
