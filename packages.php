@@ -33,18 +33,15 @@
     <nav class="navbar navbar-expand-sm bg-light justify-content-center"><h4 style = "padding: 5px;">Find different Package for different location</h4>  
     <ul class="navbar-nav">
     <li class="nav-item">
-    <div class="form-group">
-        <select class="form-control" id="sel1">
-        <option>Bangladesh</option>
-        <option>Hong Kong</option>
-        <option>America</option>
-        <option>Europe</option>
-        </select>
+        <form action="">
+        <div class="form-group">
 
-    </div>
+        <input type="text" class="form-control" id="usr" onkeyup="showHint(this.value)" placeholder = "Search with country name">
+        </div>
+        </form>
     </li>
     <li class="nav-item">
-    <button class = "btn btn-primary"> Search</button>
+
     </li>
 
 
@@ -55,9 +52,33 @@
    
 
     </nav>
+
+    <script>
+    function showHint(str)
+    {
+        if (str.length == 0)
+        {
+            document.getElementById("txtHint").innerHTML = "";
+            return;
+        }
+        else
+        {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function()
+            {
+                if (this.readyState == 4 && this.status == 200)
+                {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "search.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    }
+  </script>
 	
 	
-	
+    <p><span id="txtHint"></span></p>
 
 
 

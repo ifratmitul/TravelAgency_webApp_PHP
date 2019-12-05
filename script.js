@@ -13,6 +13,11 @@ function signOut() {
       console.log('User signed out.');
     });
   }
+
+
+
+
+
 function regi_validation()
 {
 
