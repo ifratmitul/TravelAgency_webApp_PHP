@@ -120,7 +120,7 @@
 
 
 
-                            <h5>Price $<span><?php echo $row["Price"]; ?></span></h5>
+                            <h5><span>Price $<?php echo $row["Price"]; ?></span></h5>
 
 
                             </div>

@@ -1,5 +1,7 @@
 /**************** extend css start ****************/
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,700|Open+Sans:300,400,600&display=swap");
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+
 /* line 8, /Applications/MAMP/htdocs/palash/cl/july 2019/193 Travel/193 travel html/sass/_extends.scss */
 .btn_4 {
   background-image: -webkit-linear-gradient(131deg, #feb47b, #ff7e5f, #ff7e5f, #ff7e5f);

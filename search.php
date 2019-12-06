@@ -1,15 +1,13 @@
 <?php
 
+include ('connection.php');
 $q = $_REQUEST["q"];
 
-$con = mysqli_connect('localhost','root','','MainDB');
-if (!$con) {
-    die('Could not connect: ' . mysqli_error($con));
-}
 
-mysqli_select_db($con,"ajax_demo");
+
+mysqli_select_db($conn,"ajax_demo");
 $sql="SELECT * FROM packagelist WHERE location LIKE '%$q%'";
-$result = mysqli_query($con,$sql);
+$result = mysqli_query($conn,$sql);
 
 ?>
 <section class="hotel_list section_padding single_page_hotel_list">
