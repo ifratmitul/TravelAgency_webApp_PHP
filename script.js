@@ -4,8 +4,11 @@ function onSignIn(googleUser) {
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    window.location = '<gprofile.php>';
-
+    
+    //window.location.replace("gprofile.php");
+    //$("#pic").attr('src', profile.getImageUrl());
+    //$("$name").text(profile.getName());
+    //$("#email").text(profile.getEmail());
   }
 
 

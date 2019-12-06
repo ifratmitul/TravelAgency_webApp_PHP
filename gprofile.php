@@ -11,6 +11,8 @@
 
 ?>
 
+
+
 <style>
 #pro{
     padding: 80px;
@@ -67,15 +69,15 @@
         <div class="card mb-3 shadow p-3 mb-5 bg-white rounded" style="" id  = "p_card">
           <div class="row no-gutters">
           <div class="col-md-4">
-          <?php echo '<img class="rounded-circle account-img" src = "data:image/jpeg;base64,'.base64_encode($_SESSION['upic'] ).'" width=" 250" height="250">' ?>
+          <img class="rounded-circle account-img" src = "" width=" 250" height="250"> 
         </div>
     <div class="col-md-8">
 
       <div class="card-body">
 
 
-        <h3 class="card-title">Name</h3>
-        <p id = "Email"> Email></p>
+        <h3 class="card-title" id = "name"></h3>
+        <p id = "Email" id = "email"> </p>
 
 
         <button class = "btn btn-warning" ><a href="#" onclick="signOut();">Sign out</a></button>

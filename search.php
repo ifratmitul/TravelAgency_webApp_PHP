@@ -44,7 +44,7 @@ $result = mysqli_query($conn,$sql);
                         <p>Enter Quantity</p>
 
                         <input type="text" name="quantity" value="1" class="form-control"  />
-                        <small id="emailHelp" class="form-text text-muted">If two person want to visit eneter quantity 3</small>
+                        <small id="emailHelp" class="form-text text-muted">If two person want to visit enter quantity 2</small>
                         <input type="hidden" name="hidden_name" value="<?php echo $row["title"]; ?>" />
                         <input type="hidden" name="hidden_price" value="<?php echo $row["Price"]; ?>" />
                         <input type="hidden" name="hidden_id" value="<?php echo $row["id"]; ?>" />

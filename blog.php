@@ -1,4 +1,11 @@
-<?php include ('header.php'); ?>
+<?php include ('header.php'); 
+
+$query = "SELECT * FROM blog ORDER BY id ASC";
+$resultb =  mysqli_query($conn, $query);
+
+
+
+?>
 
             <style>
             .nav-item{
@@ -6,6 +13,30 @@
             padding-right : 5px;
             }
             </style>
+
+<script>
+    function showHint(str)
+    {
+        if (str.length == 0)
+        {
+            document.getElementById("txtHint").innerHTML = "";
+            return;
+        }
+        else
+        {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function()
+            {
+                if (this.readyState == 4 && this.status == 200)
+                {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "searchb.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    }
+  </script>
 
     <!-- breadcrumb start-->
     <section class="breadcrumb breadcrumb_bg">
@@ -26,19 +57,16 @@
     <nav class="navbar navbar-expand-sm bg-light justify-content-center " id  = "snav"><h4 style = "padding: 5px;">Find different Blog based on location</h4>  
     <ul class="navbar-nav">
     <li class="nav-item">
-    <div class="form-group">
-        <select class="form-control" id="sel1">
-        <option>Bangladesh</option>
-        <option>Hong Kong</option>
-        <option>America</option>
-        <option>Europe</option>
-        </select>
+    <form action="">
+        <div class="form-group">
 
-    </div>
+        <input type="text" class="form-control" id="usr" onkeyup="showHint(this.value)" placeholder = "Search with location name">
+        </div>
+        </form>
+
+
     </li>
-    <li class="nav-item">
-    <button class = "btn btn-primary"> Search</button>
-    </li>
+
     <li class="nav-item" >
 
     <?php if(isset($_SESSION['uemail']))
@@ -64,54 +92,44 @@
 	
 
     <!--================Blog Area =================-->
+    <p><span id="txtHint"></span></p>
     <section class="blog_area section_padding">
         <div class="container">
+        <?php
+            foreach( $resultb as $row) //This variablls are decalred in the action_page. you need to change this variable based on the query u do in search page
+            {
+
+                ?> 
+
+
             
                 
                     <div class="blog_left_sidebar">
                         
 
                         <article class="blog_item">
+
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="img/bali.jpeg" alt="" >
-                                
+                            <?php echo '<img class ="card-img rounded-0" src = "data:image/jpeg;base64,'.base64_encode($row["image"]).'" > '  ?>
                             </div>
 
                             <div class="blog_details">
-                                    <h2>My Experince on bali Trip</h2>
-                                    <h4>Location: Bali, Indonesia</h4>
+                                    <h2><?php echo $row["b_title"]; ?></h2>
+                                    <h4>Location:<?php echo $row["location"]; ?></h4>
+                                    <h5>Posted by:<?php echo $row["user_email"]; ?></h5>
                                 
-                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                    he earth it first without heaven in place seed it second morning saying.</p>
-                                <ul class="blog-info-link " style = "float : right;">
-                                    <li><button class = "btn btn-sm btn-warning"> See More</button></li>
-
-                                </ul>
+                                <p> Details: <?php echo $row["b_details"]; ?></p>
+                                
                             </div>
                         </article>
 
                       
-                        <nav class="blog-pagination justify-content-center d-flex">
-                            <ul class="pagination">
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Previous">
-                                        <i class="ti-angle-left"></i>
-                                    </a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">1</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link" aria-label="Next">
-                                        <i class="ti-angle-right"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+
                     </div>
+
+                    <?php
+                      }
+                    ?>
                 
 
             
@@ -148,10 +166,10 @@
                                           <select class="form-control" name = "location" id="p_location" required>
                                           
                                             <option name ="location1" >Bangladesh</option>
-                                            <option name ="location2" >Hong Kong</option>
-                                            <option name ="location3" >USA</option>
-                                            <option name ="location4" >Uk</option>
-                                            <option name ="location5" >Germeny</option>
+                                            <option name ="location2" >Australia</option>
+                                            <option name ="location3" >America</option>
+                                            <option name ="location4" >Europe</option>
+                                            <option name ="location5" >Asia</option>
                                           </select>
                                         </div>
 

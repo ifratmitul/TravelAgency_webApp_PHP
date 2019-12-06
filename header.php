@@ -1,6 +1,7 @@
 
 <?php include ('connection.php');
 include ('action_page.php');
+include ('cart.php');
 
 ?>
 
@@ -37,7 +38,13 @@ include ('action_page.php');
     <!-- Google Login-->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+    
+
 
 
 
@@ -56,7 +63,7 @@ include ('action_page.php');
                 <div class="row align-items-center ">
                     <div class="col-lg-12">
                         <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
-                            <a class="navbar-brand" href="index.html"> <img src="img/logo.png"  alt="logo"> </a>
+                            <a class="navbar-brand" href="index.php"> <img src="img/logo.png"  alt="logo"> </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse"
                                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -101,9 +108,9 @@ include ('action_page.php');
 
                                     </li>
 
-                                    <li class="nav-item">
+                                    <li class="nav-item ">
                                     <button type="button" class="btn btn-default btn-sm nav-link" data-toggle="modal" data-target="#cart_modal">
-                                    <span class="glyphicon glyphicon-shopping-cart"></span> Cart
+                                    <span class=" fas fa-shopping-cart"></span>Cart 
                                     </button>
                                     </li>
                                 </ul>
