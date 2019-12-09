@@ -1,7 +1,7 @@
 <?php 
 
 include ('start.php');
-
+include ('cart.php');
 use PayPal\Api\Payer;
 
 use PayPal\Api\Item;
@@ -21,10 +21,10 @@ use PayPal\Api\Payment;
 
 //}
 $product = 'Test Product';
-$price = 500;
+$price = $total;
 
 //$price = $total;
-$total = $price + 2;
+$total2 = $price + 2;
 
 $payer = new Payer();
 $payer->setPaymentMethod('paypal');
@@ -44,7 +44,7 @@ $details ->setShipping(2.00)
 
 $amount = new Amount();
 $amount ->setCurrency('GBP')
-        ->setTotal($total)
+        ->setTotal($total2)
         ->setDetails($details);
 
 $transaction = new Transaction();
