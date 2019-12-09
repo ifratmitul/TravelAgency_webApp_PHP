@@ -223,7 +223,7 @@ if(isset($_GET["clearall"]))
  $message = '
  <div class="alert alert-success alert-dismissible">
   <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-  Your Shopping Cart has been clear...
+  Your Shopping Cart has been cleared.
  </div>
  ';
 }
