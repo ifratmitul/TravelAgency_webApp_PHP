@@ -65,7 +65,7 @@
                                         <tr><td colspan = 5> 
                                         <?php if(isset($_SESSION['uemail']))
                                          {  ?>
-                                        <button class = "btn btn-primary btn-block " float = "right">Pay now</button>
+                                        <button class = "btn btn-warning btn-block " float = "right" ><a href = "checkout.php">Pay now</a></button>
                                         <?php }else
                                         {
                                         ?> <a class="nav-link alert alert-info" href="register.php">Please login to complete your purchase</a><?php
