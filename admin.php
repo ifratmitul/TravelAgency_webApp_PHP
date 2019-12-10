@@ -134,7 +134,7 @@ if(isset($_GET['alogout']))
                                 <form id = "adPackage" method = "post" action = "admin_server.php" enctype="multipart/form-data" >
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Package Title</label>
-                                          <input type="text" name="ptitle" class="form-control" id="p_title" placeholder="Title">
+                                          <input type="text" name="ptitle" class="form-control" id="p_title" placeholder="Title" required>
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlSelect1">Package Location</label>
@@ -149,15 +149,15 @@ if(isset($_GET['alogout']))
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Hotel</label>
-                                          <input type="text" name="hotel" class="form-control" id="p_hotel" placeholder="Hotel name">
+                                          <input type="text" name="hotel" class="form-control" id="p_hotel" placeholder="Hotel name"required>
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Maximum Number of Traveler</label>
-                                          <input type="number" name="traveler" class="form-control" id="p_hotel" placeholder="Maximum number of traveler allowed">
+                                          <input type="number" name="traveler" class="form-control" id="p_hotel" placeholder="Maximum number of traveler allowed" required>
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Cost</label>
-                                          <input type="number" name="price" class="form-control" id="p_hotel" placeholder="Total Amount">
+                                          <input type="number" name="price" class="form-control" id="p_hotel" placeholder="Total Amount" required>
                                         </div>
                                         
                                         <div class="form-group">
@@ -297,31 +297,31 @@ if(isset($_GET['alogout']))
                                 <form id = "addEmploye" method = "post" action = "admin_server.php" enctype="multipart/form-data" >
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Employee Name</label>
-                                          <input type="text" name ="ename" class="form-control" id="eName" placeholder="First and Last Name">
+                                          <input type="text" name ="ename" class="form-control" id="eName" placeholder="First and Last Name" required>
                                         </div>
                                         <div class="form-group">
                                                 <label for="exampleFormControlInput1">Employee Designation</label>
-                                                <input type="text" name = "etitle" class="form-control" id="edesignation" placeholder="Designation/title">
+                                                <input type="text" name = "etitle" class="form-control" id="edesignation" placeholder="Designation/title" required>
                                         </div>
                                         <div class="form-group">
                                                 <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" name = "email" class="form-control" id="e_email" aria-describedby="emailHelp" placeholder="Enter email">
+                                                <input type="email" name = "email" class="form-control" id="e_email" aria-describedby="emailHelp" placeholder="Enter email" required>
                                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                        </div>
                                         <div class="form-group">
                                                 <label for="exampleInputPassword1">Password</label>
-                                                <input type="password" name = "p1" class="form-control" id="ep1" placeholder="Password">
+                                                <input type="password" name = "p1" class="form-control" id="ep1" placeholder="Password" required>
                                          </div>
                                          <div class="form-group">
                                                 <label for="exampleInputPassword1"> Confirm Password</label>
-                                                <input type="password" name = "p2" class="form-control" id="ep2" placeholder="Password">
+                                                <input type="password" name = "p2" class="form-control" id="ep2" placeholder="Password" required>
                                          </div>
                                         
 
 
                                         <div class="form-group">
                                                 <label for="exampleFormControlFile1">Add Profile Picture</label >
-                                                <input type="file" name ="aimage"class="form-control-file" id="exampleFormControlFile1" >
+                                                <input type="file" name ="aimage"class="form-control-file" id="exampleFormControlFile1" required>
                                               </div>
 
                                       </form>

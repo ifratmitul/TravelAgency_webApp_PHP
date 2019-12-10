@@ -92,26 +92,26 @@
 
                             <div class="form-group">
                                   <label for="inputAddress">Name</label>
-                                  <input type="text" name = "name" class="form-control" id="add" placeholder="Enter your full name">
+                                  <input type="text" name = "name" class="form-control" id="add" placeholder="Enter your full name" required>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
                                     <label for="inputEmail4">Password</label>
-                                    <input type="password" class="form-control" name = "p1" id="pass1" placeholder="Minimum 6 Character">
+                                    <input type="password" class="form-control" name = "p1" id="pass1" placeholder="Minimum 6 Character" required>
                                   </div>
                                   <div class="form-group col-md-6">
                                     <label for="inputPassword4">Confirm Password</label>
-                                    <input type="password" class="form-control"  name = "p2" id="pass2" placeholder="Confirm Password">
+                                    <input type="password" class="form-control"  name = "p2" id="pass2" placeholder="Confirm Password" required>
                                   </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputAddress">Email</label>
-                                    <input type="email" class="form-control" name = "email" id="r_email" placeholder="Email Address">
+                                    <input type="email" class="form-control" name = "email" id="r_email" placeholder="Email Address" required>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="exampleFormControlFile1">Add Profile Picture</label >
-                                    <input type="file" id ="image" name ="image"class="form-control-file" id="exampleFormControlFile1" >
+                                    <input type="file" id ="image" name ="image"class="form-control-file" id="exampleFormControlFile1" required>
                                   </div>
                                 
 

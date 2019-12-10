@@ -159,7 +159,7 @@ $resultb =  mysqli_query($conn, $query);
                                 <form id = "adblg" method = "post" action = "action_page.php" enctype="multipart/form-data">
                                         <div class="form-group">
                                           <label for="exampleFormControlInput1">Blog Title</label>
-                                          <input type="text" name = "btitle" class="form-control" id="p_title" placeholder="Title">
+                                          <input type="text" name = "btitle" class="form-control" id="p_title" placeholder="Title" required>
                                         </div>
                                         <div class="form-group">
                                           <label for="exampleFormControlSelect1">Location</label>
@@ -176,7 +176,7 @@ $resultb =  mysqli_query($conn, $query);
                                         
                                         <div class="form-group">
                                           <label for="exampleFormControlTextarea1">Details</label>
-                                          <textarea class="form-control" name = "bdetails" id="p_details" rows="3"></textarea>
+                                          <textarea class="form-control" name = "bdetails" id="p_details" rows="3" required></textarea>
                                         </div>
 
                                         <div class="form-group">
