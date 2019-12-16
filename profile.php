@@ -1,7 +1,8 @@
 <?php include ('header.php');
-//include('action_page.php');
+//include('pay.php');
 
 //session_start();
+
 
 if(!isset($_SESSION['uemail']))
 {
@@ -92,7 +93,15 @@ if(isset($_GET['ulogout']))
         <p id = "Email"> <?php echo $_SESSION['uemail'];?></p>
 
         <p> <?php if(isset($_SESSION['blogged'])) { echo $_SESSION['blogged'];
-                                        unset($_SESSION['blogged']); } ?></p>
+                                        unset($_SESSION['blogged']); } ?>
+                                        
+                                                                        </p>
+
+
+        <p> <?php if(isset($_SESSION['pmade'])) { 
+            echo $_SESSION['pmade'];
+            unset($_SESSION['pmade']); } ?></p>
+        
         <button class = "btn btn-warning"><a href = "logout.php">Logout</a></button>
 
 

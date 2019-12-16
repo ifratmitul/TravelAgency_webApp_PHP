@@ -27,7 +27,7 @@
                         <h4>Find the best package for you</h4>
                         <ul>
                             <li><a href="#">Top Places</a></li>
-                            <li><a href="#">Our Packages</a></li>
+                            <li><a href="admin_login.php">Admin</a></li>
 
 
                         </ul>

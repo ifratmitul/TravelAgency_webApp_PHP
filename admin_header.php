@@ -42,7 +42,7 @@ include('admin_server.php');
 
 
         <nav class="navbar navbar-expand-sm  sticky-top justify-content-center" id="head">
-                <a class="navbar-brand" href="#" ><img src="Admin_logo.png"></a>
+                <a class="navbar-brand" href="index.php" ><img src="Admin_logo.png"></a>
                 <div class="navbar-item">Admin Panel</div>
                 
                 

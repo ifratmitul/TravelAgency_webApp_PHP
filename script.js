@@ -1,52 +1,20 @@
-function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-    
-    //window.location.replace("gprofile.php");
-    //$("#pic").attr('src', profile.getImageUrl());
-    //$("$name").text(profile.getName());
-    //$("#email").text(profile.getEmail());
-  }
-
-
-function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-
-
-
-
-
 function regi_validation()
 {
 
-    var fn = document.getElementById("Fname").value;
-    var ln = document.getElementById("Lname").value;
+    var fn = document.getElementById("name").value;
     var p1  = document.getElementById("pass1").value;
     var p2 = document.getElementById("pass2").value;
-    var em = document.getElementById("r_email").value;
-    var ad = document.getElementById("add").value;
 
-    if (fn == ""|| ln == "" || fn  == isNaN() || ln == isNaN()){
-        window.alert("Must fill First and Last Name and it can't contain number")
+
+    if ( fn  == isNaN()){
+        window.alert("Name can't contain number")
     }
     
 
     if (p1 != p2){
         window.alert("Password doesn't match.");
     }
-    if(em == ""){
-        window.alert("Email field is empty");
-    }
-    if(ad = ""){
-        window.alert("you must fill in your address details");
-    }
+
 
 }
 

@@ -52,8 +52,8 @@
               <button type="submit" name= "ulogin" form = "login_f"  class="btn btn-primary float-right">Login</button>
               </div>
               <div class = "card-footer justify-content-center ">
-              <h4 class =" container text-center">Or Login With Google</h4>
-               <div class = "g-signin2 " data-onsuccess = "onSignIn"></div>
+              <h4 class =" container text-center">Don't have an account? Register now</h4>
+               
                
               </div>
             </div>
@@ -92,7 +92,7 @@
 
                             <div class="form-group">
                                   <label for="inputAddress">Name</label>
-                                  <input type="text" name = "name" class="form-control" id="add" placeholder="Enter your full name" required>
+                                  <input type="text" name = "name" class="form-control" id="name" placeholder="Enter your full name" required>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
